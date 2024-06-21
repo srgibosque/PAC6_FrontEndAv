@@ -2,18 +2,24 @@
 
 <div class="students-container">
   <ul>
-    <li *ngFor="let student of students; trackBy: trackById">
-      <h4>{{student.nombre}} {{student.apellidos}}</h4>
-      <div class="student-data">
-        <p><strong>Sexe: </strong>{{student.sexo}}</p>
-        <p><strong>Nota: </strong>{{student.nota}}</p>
-        <p><strong>Absències: </strong>{{student.faltas_asistencia}}</p>
+    @for(student of students; track student.id){
+      <li>
+        <div class="student-data-title">
+          <h4>{{student.nombre}} {{student.apellidos}}</h4>
+          <div class="student-data">
+            <p><strong>Sexe: </strong>{{student.sexo}}</p>
+            <p><strong>Nota: </strong>{{student.nota}}</p>
+            <p><strong>Absències: </strong>{{student.faltas_asistencia}}</p>
+          </div>
+        </div>
         @if(student.nota >= 5){
-          <p>Aprovat</p>
+          <strong><p class="badge pass">Aprovat</p></strong>
         } @else {
-          <p>Suspès</p>
+          <strong><p class="badge fail">Suspès</p></strong>
         }
-      </div>
-    </li>
+      </li>
+    } @empty {
+      <li>No hi ha elements a la llista</li>
+    }
   </ul>
 </div>
