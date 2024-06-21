@@ -9,7 +9,7 @@ import { StaticsRoutingModule } from "./statics-routing.module";
   ],
   imports: [
     CommonModule,
-    StaticsRoutingModule
+    StaticsRoutingModule,
   ],
 })
 

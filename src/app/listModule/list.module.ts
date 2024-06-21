@@ -10,7 +10,7 @@ import { ListComponent } from "./list/list.component";
   ],
   imports: [
     CommonModule,
-    ListRoutingModule
+    ListRoutingModule,
   ],
 })
 

@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-statics',
-  standalone: true,
-  imports: [],
+  standalone: false,
   templateUrl: './statics.component.html',
   styleUrl: './statics.component.css'
 })
