@@ -18,4 +18,8 @@ export class HomeComponent implements OnInit{
       this.students = data;
     })
   }
+
+  trackById(index: number, student: StudentDTO){
+    return student.id;
+  }
 }

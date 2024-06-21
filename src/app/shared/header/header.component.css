@@ -1,6 +1,6 @@
 /* General styles for the navigation menu */
 nav {
-  margin: 16px;
+  margin: 24px 16px;
 }
 
 nav ul {
@@ -28,5 +28,10 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: #333333;
-  color: white
+  color: white;
+}
+
+nav ul li a.active {
+  background-color: #333333;
+  color: white;
 }
