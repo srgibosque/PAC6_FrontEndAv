@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h2>Students List</h2>
+
+<div class="students-container">
+  <ul>
+    <li *ngFor="let student of students">
+      <h4>{{student.nombre}} {{student.apellidos}}</h4>
+      <div class="student-data">
+        <p><strong>Sexe: </strong>{{student.sexo}}</p>
+        <p><strong>Nota: </strong>{{student.nota}}</p>
+        <p><strong>Absències: </strong>{{student.faltas_asistencia}}</p>
+      </div>
+    </li>
+  </ul>
+</div>

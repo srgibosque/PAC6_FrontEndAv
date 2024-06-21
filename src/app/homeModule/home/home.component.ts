@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { StudentsService } from './../../Services/students.service';
+import { Component, OnInit } from '@angular/core';
+import { StudentDTO } from '../../Models/studentDTO.interface';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
+  students: StudentDTO[] = [];
 
+  constructor(private studentsService: StudentsService){}
+
+  ngOnInit(){
+    this.studentsService.getStudents().subscribe((data) => {
+      this.students = data;
+    })
+  }
 }
