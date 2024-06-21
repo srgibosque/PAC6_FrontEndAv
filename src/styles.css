@@ -1,7 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  font-family: Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   max-width: 1000px;
   margin: 0 auto;
   color: #333333;
+  height: 100%;
+}
+
+h2{
+  margin: 16px;
+}
+
+.badge{
+  font-size: 14px !important;
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #333333;
+}
+
+.pass{
+  background-color: #8cff9f;
+}
+
+.fail{
+  background-color: #ec8b7a;
 }

@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit{
     })
   }
 
-  trackById(index: number, student: StudentDTO){
-    return student.id;
-  }
+  // trackById(index: number, student: StudentDTO){
+  //   return student.id;
+  // }
 }

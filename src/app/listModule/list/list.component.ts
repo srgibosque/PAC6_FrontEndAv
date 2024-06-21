@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StudentDTO } from '../../Models/studentDTO.interface';
+import { StudentsService } from '../../Services/students.service';
 
 @Component({
   selector: 'app-list',
@@ -6,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
+  students: StudentDTO[] = [];
 
+  constructor(private studentsService: StudentsService){}
+
+  ngOnInit() {
+    this.studentsService.getStudents().subscribe((data) => {
+      this.students = data;
+    })
+  }
 }

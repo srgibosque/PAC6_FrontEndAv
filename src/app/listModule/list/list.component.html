@@ -1,1 +1,14 @@
-<p>list works!</p>
+<h2>Students virtual scroll</h2>
+
+<cdk-virtual-scroll-viewport appendOnly itemSize="50" class="viewport">
+  <div *cdkVirtualFor="let student of students" class="item">
+    <p>{{student.nombre}}</p>
+    <div>
+      @if(student.nota >= 5){
+        <strong><p class="badge pass">Aprovat</p></strong>
+      } @else {
+        <strong><p class="badge fail">Suspès</p></strong>
+      }
+    </div>
+  </div>
+</cdk-virtual-scroll-viewport>
