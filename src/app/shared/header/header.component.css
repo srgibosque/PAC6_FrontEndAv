@@ -1,6 +1,6 @@
 /* General styles for the navigation menu */
 nav {
-  background-color: grey;
+  margin: 16px;
 }
 
 nav ul {
@@ -8,23 +8,25 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  gap: 12px;
+  justify-content: flex-start;
 }
 
 nav ul li {
-  margin: 0 15px;
+  border: 2px solid #333333;
 }
 
 nav ul li a {
+  font-weight: 600;
   display: block;
-  color: white;
+  color: #333333;
   text-align: center;
-  padding: 14px 20px;
+  padding: 16px 20px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: #575757;
-  border-radius: 4px;
+  background-color: #333333;
+  color: white
 }

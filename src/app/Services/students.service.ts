@@ -19,7 +19,7 @@ export class StudentsService {
           header: true,
           skipEmptyLines: true,
           complete: (result) => {
-            console.log(result);
+            console.log("loaded successfully");
           },
         });
 
