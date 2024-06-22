@@ -1,1 +1,10 @@
-<p>statics works!</p>
+<app-resume-data></app-resume-data>
+<app-general-results></app-general-results>
+<app-gender></app-gender>
+<div *ngIf="studentStatics">
+  <p>Pass: {{studentStatics.pass}}</p>
+  <p>Fail: {{studentStatics.fail}}</p>
+  <p>Male: {{studentStatics.male}}</p>
+  <p>Female: {{studentStatics.female}}</p>
+  <p>Total: {{studentStatics.totalStudents}}</p>
+</div>

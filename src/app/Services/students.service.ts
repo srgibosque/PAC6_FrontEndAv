@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Papa } from 'ngx-papaparse';
 import { Observable, catchError, map, of } from 'rxjs';
 import { StudentDTO } from '../Models/studentDTO.interface';
+import { StudentStatics } from '../Models/studentStatics.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,37 @@ export class StudentsService {
         return of([]);
       })
     );
+  }
+
+  getStudentStatics(studentsList: StudentDTO[]): StudentStatics{
+    let studentsPassed = 0;
+    let studentsFailed = 0;
+    let studentsMale = 0;
+    let studentsFemale = 0;
+    studentsList.forEach((student) => {
+      if(typeof student.nota === 'number'){
+        if(student.nota >= 5){
+          studentsPassed++;
+        } else {
+          studentsFailed++;
+        }
+      }
+
+      if(student.sexo){
+        if(student.sexo === 'M'){
+          studentsMale++;
+        } else if (student.sexo === 'F') {
+          studentsFemale++;
+        }
+      }
+    });
+
+    return {
+      pass: studentsPassed,
+      fail: studentsFailed,
+      male: studentsMale,
+      female: studentsFemale,
+      totalStudents: studentsList.length
+    }
   }
 }
