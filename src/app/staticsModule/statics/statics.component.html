@@ -1,10 +1,25 @@
-<app-resume-data></app-resume-data>
-<app-general-results></app-general-results>
-<app-gender></app-gender>
 <div *ngIf="studentStatics">
+  <app-resume-data 
+    [passedStudents]="studentStatics.pass"
+    [failedStudents]="studentStatics.fail"
+    [totalStudents]="studentStatics.totalStudents">
+  </app-resume-data>
+  <app-gender 
+    [maleStudents]="studentStatics.male"
+    [femaleStudents]="studentStatics.female">
+  </app-gender>
+  <app-general-results 
+    [passedStudents]="studentStatics.pass"
+    [failedStudents]="studentStatics.fail"
+    [totalStudents]="studentStatics.totalStudents">
+  </app-general-results>
+  
+</div>
+
+<!-- <div *ngIf="studentStatics">
   <p>Pass: {{studentStatics.pass}}</p>
   <p>Fail: {{studentStatics.fail}}</p>
   <p>Male: {{studentStatics.male}}</p>
   <p>Female: {{studentStatics.female}}</p>
   <p>Total: {{studentStatics.totalStudents}}</p>
-</div>
+</div> -->
