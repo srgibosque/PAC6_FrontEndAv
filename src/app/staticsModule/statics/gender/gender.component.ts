@@ -27,7 +27,12 @@ export class GenderComponent implements OnInit{
           'rgb(55, 55, 55)',
           'rgb(88, 88, 88)',
         ],
-        hoverOffset: 4
+        hoverOffset: 4,
+        borderColor: [
+          '#333333',
+          '#333333',
+        ],
+        borderWidth: 2,
       }]
     };
 

@@ -38,7 +38,7 @@ export class GeneralResultsComponent implements OnInit{
           '#333333',
           '#333333',
         ],
-        borderWidth: 2
+        borderWidth: 2,
       }]
     };
 

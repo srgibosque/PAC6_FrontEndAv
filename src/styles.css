@@ -7,7 +7,7 @@ body{
   height: 100%;
 }
 
-h2{
+h2, h3, canvas{
   margin: 16px;
 }
 

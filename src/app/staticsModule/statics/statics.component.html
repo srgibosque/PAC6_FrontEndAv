@@ -1,25 +1,39 @@
+<h2>Statics Module</h2>
+
 <div *ngIf="studentStatics">
-  <app-resume-data 
-    [passedStudents]="studentStatics.pass"
-    [failedStudents]="studentStatics.fail"
-    [totalStudents]="studentStatics.totalStudents">
-  </app-resume-data>
-  <app-gender 
+  @defer(){
+    <app-resume-data 
+      [passedStudents]="studentStatics.pass"
+      [failedStudents]="studentStatics.fail"
+      [totalStudents]="studentStatics.totalStudents">
+    </app-resume-data>
+  } @placeholder {
+    <div class="graph-box">
+      <div class="spinner"></div>
+    </div>
+  }
+
+  @defer(on viewport){
+    <app-gender 
     [maleStudents]="studentStatics.male"
     [femaleStudents]="studentStatics.female">
   </app-gender>
-  <app-general-results 
-    [passedStudents]="studentStatics.pass"
-    [failedStudents]="studentStatics.fail"
-    [totalStudents]="studentStatics.totalStudents">
-  </app-general-results>
+  } @placeholder {
+    <div class="graph-box">
+      <div class="spinner"></div>
+    </div>
+  }
+
+  @defer(on viewport){
+    <app-general-results 
+      [passedStudents]="studentStatics.pass"
+      [failedStudents]="studentStatics.fail"
+      [totalStudents]="studentStatics.totalStudents">
+    </app-general-results>
+  } @placeholder {
+    <div class="graph-box">
+      <div class="spinner"></div>
+    </div>
+  }
   
 </div>
-
-<!-- <div *ngIf="studentStatics">
-  <p>Pass: {{studentStatics.pass}}</p>
-  <p>Fail: {{studentStatics.fail}}</p>
-  <p>Male: {{studentStatics.male}}</p>
-  <p>Female: {{studentStatics.female}}</p>
-  <p>Total: {{studentStatics.totalStudents}}</p>
-</div> -->
