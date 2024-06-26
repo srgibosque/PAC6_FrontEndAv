@@ -7,6 +7,7 @@ import { GeneralResultsComponent } from "./statics/general-results/general-resul
 import { ResumeDataComponent } from "./statics/resume-data/resume-data.component";
 import { StudentsService } from "../Services/students.service";
 import { HttpClientModule } from "@angular/common/http";
+import { SpinnerComponent } from "../shared/spinner/spinner.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from "@angular/common/http";
     CommonModule,
     StaticsRoutingModule,
     HttpClientModule,
+    SpinnerComponent,
   ],
   providers: [StudentsService],
 })

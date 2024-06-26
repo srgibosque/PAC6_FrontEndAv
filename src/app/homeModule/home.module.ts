@@ -6,6 +6,8 @@ import { HomeComponent } from "./home/home.component";
 import { HomeRoutingModule } from "./home-routing.module";
 
 import { StudentsService } from "../Services/students.service";
+import { StudentCardComponent } from "../shared/student-card/student-card.component";
+import { SpinnerComponent } from "../shared/spinner/spinner.component";
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { StudentsService } from "../Services/students.service";
     CommonModule,
     HomeRoutingModule,
     HttpClientModule,
+    StudentCardComponent,
+    SpinnerComponent,
   ],
   providers: [StudentsService],
 })

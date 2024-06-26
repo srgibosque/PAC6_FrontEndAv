@@ -1,0 +1,15 @@
+<li>
+  <div class="student-data-title">
+    <h4>{{student.nombre}} {{student.apellidos}}</h4>
+    <div class="student-data">
+      <p><strong>Sexe: </strong>{{student.sexo}}</p>
+      <p><strong>Nota: </strong>{{student.nota}}</p>
+      <p><strong>Absències: </strong>{{student.faltas_asistencia}}</p>
+    </div>
+  </div>
+  @if(student.nota >= 5){
+    <strong><p class="badge pass">Aprovat</p></strong>
+  } @else {
+    <strong><p class="badge fail">Suspès</p></strong>
+  }
+</li>
